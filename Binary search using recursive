@@ -1,0 +1,17 @@
+def binarysear(arr,l,r,target):
+  if r >=1:
+    mid=(l+r)+1//2
+    if arr[mid]==target:
+      return mid
+    elif arr[mid]>target:
+      return  binarysear(arr,l,mid-1,target) 
+    else:
+      return  binarysear(arr,mid+1,r,target) 
+  return -1
+arr=[int(i) for i in input().split()]
+target=int(input())
+result=binarysear(arr,0,len(arr)-1,target)
+if result !=-1:
+  print(result)
+else:
+  print(result)  
