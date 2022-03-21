@@ -1,0 +1,13 @@
+#n=num_of pen ,r=money,k=exchange_money,c=
+def recyclePens(n, r, k, c):
+    l=1
+    h=n
+    while l<=h:
+        mid=(l+h)//2
+        amout=r+(n-mid)*k
+        if (mid*c<=amout):
+            l=mid+1
+        else:
+            h=mid-1
+    return h        
+  
