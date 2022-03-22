@@ -1,0 +1,24 @@
+def hello(arr,target):
+    arr.sort()
+    l=0
+    h=n-1
+    while l<=h:
+        mid=(l+h)//2
+        if arr[mid]==target:
+            return mid
+        elif arr[mid]>target:
+            h=mid-1
+        else:
+            l=mid+1
+    return -1 
+k=int(input())    
+for i in range(k):
+    n,target=map(int,input().split(","))
+    arr=list(map(int,input().split(",")))
+    result=(hello(arr,target))
+    if result !=-1:
+        print(result)
+    else:
+        arr.append(target)
+        print(hello(arr,target))
+    
