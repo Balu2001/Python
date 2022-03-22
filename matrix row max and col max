@@ -1,0 +1,29 @@
+r,c=map(int,input().split())
+p=[]
+d1=0
+d2=0
+row=0
+col=0
+row1=[]
+col1=[]
+for i in range(r):
+    l=list(map(int,input().split()))
+    p.append(l)
+print(p)    
+for i in range(r):
+  for j in range(c):
+    if j==i:
+      d1=d1+p[i][j]
+    if i==r-j-1:
+      d2=d2+p[i][j]
+print(d1,d2)
+for i in range(len(p)):
+  row=0
+  col=0
+  for j in range(len(p)):
+    row=row+p[i][j]
+    col+=p[j][i]
+  row1.append(row)
+  col1.append(col)  
+print(max(row1))
+print(max(col1))
