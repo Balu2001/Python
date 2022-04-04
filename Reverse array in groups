@@ -1,0 +1,22 @@
+Input:
+N = 4, K = 3
+arr[] = {5,6,8,9}
+Output: 8 6 5 9
+Input:
+N = 5, K = 3
+arr[] = {1,2,3,4,5}
+Output: 3 2 1 5 4
+Explanation: First group consists of elements
+1, 2, 3. Second group consists of 4,5.
+
+
+class Solution:	
+    #Function to reverse every sub-array group of size k.
+	def reverseInGroups(self, arr, N, K):
+	    l=[]
+		# code here
+		for i in range(0,N,K):
+		    mi=i
+		    ma=min(i+K,N)
+		    l.extend(arr[mi:ma][::-1])
+		arr[:]=l[:]    
