@@ -1,0 +1,17 @@
+def happ(su):
+    pro=0
+    while su:
+        r=su%10
+        pro+=r**2
+        su=su//10
+    return pro.     #split number and sum of product
+        
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        su=n
+        while(su>9):
+            su=happ(su)
+        if su==1 or su==7:
+            return True
+        return False
+    
