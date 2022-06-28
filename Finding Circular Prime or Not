@@ -1,0 +1,31 @@
+n=int(input())
+if n>0:
+    if n==0 or n==1:
+        print("Not a prime and also not a circular prime")
+    else:
+        flag=0
+        for i in range(2,n):
+            if(n%i==0):
+                flag=1
+                break
+        if flag==0:
+            num=n
+            c=0
+            while n:
+                r=n%10
+                n=n/10
+                c=c*10+r
+            for i in range(2,c):
+                if(c%i==0):
+                    flag=1
+                break
+            if flag==0:
+                print("circular prime")
+            else:
+                print("not a circular prime it's prime")
+            
+        else:
+            print("not a prime number")
+                
+                
+            
