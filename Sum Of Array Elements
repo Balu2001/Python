@@ -1,0 +1,16 @@
+# sum of array elementes
+arr=[3,1,2,3,4,5]
+def sumofarrayelementes(arr,s):
+    l=[]
+    for i in range(len(arr)):
+        l.append(arr[i])
+        while sum(l)>s:
+            l.pop(0)
+        if(sum(l)==s):
+            return l
+    return 0
+s=16
+
+print(sumofarrayelementes(arr,s))
+        
+        
